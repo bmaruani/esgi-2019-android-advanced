@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+    <ImageView
+            android:id="@+id/component_custom_imv"
+            android:layout_gravity="center_vertical"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            tools:src="@android:drawable/star_on"/>
+
+    <TextView
+            android:id="@+id/component_custom_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a ultrices est. Nullam mi odio, sollicitudin ut justo in, facilisis ullamcorper metus. Nunc luctus est sit amet felis euismod, ut finibus odio vehicula"/>
+
+</LinearLayout>

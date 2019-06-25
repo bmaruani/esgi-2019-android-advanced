@@ -11,4 +11,9 @@
             <enum name="sad" value="1"/>
         </attr>
     </declare-styleable>
+    <declare-styleable name="CustomComponent">
+        <attr name="src" format="reference"/>
+        <attr name="textColor" format="color"/>
+        <attr name="text" format="reference|string"/>
+    </declare-styleable>
 </resources>

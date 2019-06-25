@@ -6,14 +6,22 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context=".module.customview.CustomViewActivity">
+        tools:context=".module.customview.CustomViewActivity"
+        android:id="@+id/custom_view_container">
 
     <com.maruani.esgi.androidadvanced.module.customview.EmotionalFaceView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             app:borderColor="@color/colorPrimaryDark"
             app:state="sad"
 
     />
+
+    <com.maruani.esgi.androidadvanced.module.customview.CustomComponent
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:src="@android:drawable/star_off"
+            app:textColor="@color/colorPrimary"
+            app:text="toto"/>
 
 </LinearLayout>
