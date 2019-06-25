@@ -21,5 +21,9 @@ class HomeActivity : BaseActivity<HomePresenter, HomeView>(R.layout.activity_hom
             presenter.onCustomViewButtonClick()
         }
 
+        findViewById<Button>(R.id.home_arch_component_button).setOnClickListener {
+            presenter.onArchComponentButtonClick()
+        }
+
     }
 }

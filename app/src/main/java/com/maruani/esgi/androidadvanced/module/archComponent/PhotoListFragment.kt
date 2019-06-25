@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.maruani.esgi.androidadvanced.R
@@ -50,7 +51,11 @@ class PhotoListFragment : Fragment() {
         simpleListAdapter = SimpleListAdapter()
         simpleListAdapter?.setListener(object : SimpleListAdapter.ClickListener {
             override fun onClick(photo: FlickrPhoto) {
-                
+                view?.also {
+                    val actionDetail =
+                        PhotoListFragmentDirections.actionPhotoListFragmentToPhotoDetailFragment(photo.id)
+                    Navigation.findNavController(it).navigate(actionDetail)
+                }
             }
 
         })

@@ -10,4 +10,8 @@ class HomePresenter : BasePresenter<HomeView>() {
     fun onCustomViewButtonClick() {
         navigator.toCustomView()
     }
+
+    fun onArchComponentButtonClick() {
+        navigator.toArchComponent()
+    }
 }

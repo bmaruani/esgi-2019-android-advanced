@@ -3,4 +3,5 @@
     <string name="home_recyclerview_button_text">RecyclerView</string>
     <string name="home_title_text">Demo Application</string>
     <string name="home_customview_button_text">custom view</string>
+    <string name="home_arch_component_button_text">arch component</string>
 </resources>

@@ -9,6 +9,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
+import androidx.navigation.fragment.navArgs
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.maruani.esgi.androidadvanced.R
@@ -22,6 +23,8 @@ class PhotoDetailFragment : Fragment() {
     lateinit var tagsTv: TextView
 
     private lateinit var viewModel: PhotoDetailViewModel
+
+    private val args by navArgs<PhotoDetailFragmentArgs>()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.activity_photo_detail, null)
@@ -49,6 +52,7 @@ class PhotoDetailFragment : Fragment() {
             updateInfo(it)
         })
         //Appel API
+        viewModel.getPhoto(args.photoId)
     }
 
     private fun updateInfo(photoDetail: FlickrPhotoDetail) {
