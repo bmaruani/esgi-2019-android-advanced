@@ -19,21 +19,6 @@ abstract class BaseActivity<P : BasePresenter<V>, V : BaseView>(@LayoutRes val l
         presenter.navigator = Navigator(this)
         setContentView(layout)
 
-        presenter.onCreate()
-    }
-
-    override fun onResume() {
-        super.onResume()
-        presenter.onResume()
-    }
-
-    override fun onPause() {
-        super.onPause()
-        presenter.onPause()
-    }
-
-    override fun onStop() {
-        super.onStop()
-        presenter.onStop()
+        lifecycle.addObserver(presenter)
     }
 }

@@ -1,9 +1,12 @@
 package com.maruani.esgi.androidadvanced.module.recyclerview.simplelist.business.api
 
 import com.maruani.esgi.androidadvanced.BuildConfig
+import com.maruani.esgi.androidadvanced.module.recyclerview.simplelist.business.dto.EPhotoDetail
 import com.maruani.esgi.androidadvanced.module.recyclerview.simplelist.business.dto.EPhotosResponse
+import com.maruani.esgi.androidadvanced.module.recyclerview.simplelist.business.dto.mapper.EPhotoDetailMapper
 import com.maruani.esgi.androidadvanced.module.recyclerview.simplelist.business.dto.mapper.EPhotosResponseMapper
 import com.maruani.esgi.androidadvanced.module.recyclerview.simplelist.business.model.FlickrPhoto
+import com.maruani.esgi.androidadvanced.module.recyclerview.simplelist.business.model.FlickrPhotoDetail
 import okhttp3.OkHttpClient
 import retrofit2.Call
 import retrofit2.Callback
@@ -51,6 +54,22 @@ object FlickrProvider {
                 response.body()?.also {
                     val photos = EPhotosResponseMapper().map(it)
                     listener.onSuccess(photos)
+                }
+            }
+
+        })
+    }
+
+    fun getPhotoDetail(photoId: String, listener: Listener<FlickrPhotoDetail>) {
+        service.getPhotoInfo(photoId).enqueue(object : Callback<EPhotoDetail> {
+            override fun onFailure(call: Call<EPhotoDetail>, t: Throwable) {
+                listener.onError(t)
+            }
+
+            override fun onResponse(call: Call<EPhotoDetail>, response: Response<EPhotoDetail>) {
+                response.body()?.let {
+                    val photoDetail = EPhotoDetailMapper().map(it)
+                    listener.onSuccess(photoDetail)
                 }
             }
 

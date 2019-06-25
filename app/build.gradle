@@ -4,9 +4,12 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+apply plugin: "androidx.navigation.safeargs.kotlin"
+
 ext.retrofit_version = '2.5.0'
 ext.okhttp_version = '3.14.1'
 ext.stetho_version = '1.5.1'
+ext.navigation_version = '2.0.0'
 
 android {
     compileSdkVersion 28
@@ -59,4 +62,13 @@ dependencies {
     //Stetho
     implementation "com.facebook.stetho:stetho:$stetho_version"
     implementation "com.facebook.stetho:stetho-okhttp3:$stetho_version"
+
+    //Architecture component
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0'
+
+    implementation "androidx.navigation:navigation-fragment:$navigation_version"
+    implementation "androidx.navigation:navigation-ui:$navigation_version"
+    implementation "androidx.navigation:navigation-runtime-ktx:$navigation_version"
+    implementation "androidx.navigation:navigation-fragment-ktx:$navigation_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$navigation_version"
 }
