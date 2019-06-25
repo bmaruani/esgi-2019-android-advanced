@@ -48,11 +48,12 @@ class PhotoDetailFragment : Fragment() {
         viewModel.photoLiveData.observe(viewLifecycleOwner, Observer {
             updateInfo(it)
         })
-
+        //Appel API
     }
 
     private fun updateInfo(photoDetail: FlickrPhotoDetail) {
         Glide.with(this).load(photoDetail.url).transition(DrawableTransitionOptions.withCrossFade()).into(imageView)
+        nameTv.text = photoDetail.username
         titleTv.text = photoDetail.title
         descriptionTv.text = photoDetail.description
         tagsTv.text = photoDetail.tags.joinToString(prefix = "#", separator = "  #")

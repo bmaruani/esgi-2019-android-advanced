@@ -13,6 +13,7 @@ import com.maruani.esgi.androidadvanced.module.recyclerview.simplelist.business.
 
 class SimpleListAdapter : RecyclerView.Adapter<SimpleListAdapter.SimpleListViewHolder>() {
     private var data: List<FlickrPhoto>? = null
+    private var listener: ClickListener? = null
 
     fun setData(data: List<FlickrPhoto>) {
         this.data = data
@@ -34,12 +35,18 @@ class SimpleListAdapter : RecyclerView.Adapter<SimpleListAdapter.SimpleListViewH
             .load(flickrPhoto.url)
             .transition(DrawableTransitionOptions.withCrossFade())
             .into(holder.thumbnailImv)
+
+        holder.itemView.setOnClickListener { listener?.onClick(flickrPhoto) }
     }
 
 
     class SimpleListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val thumbnailImv: ImageView = itemView.findViewById(R.id.item_photo_imv)
         val titleTv: TextView = itemView.findViewById(R.id.item_photo_title_tv)
+    }
+
+    interface ClickListener {
+        fun onClick(photo: FlickrPhoto)
     }
 
 }

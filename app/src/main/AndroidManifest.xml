@@ -15,6 +15,8 @@
             android:theme="@style/AppTheme"
             android:usesCleartextTraffic="true"
             tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".module.archComponent.RootActivity">
+        </activity>
         <activity android:name=".module.customview.CustomViewActivity">
         </activity>
         <activity android:name=".module.recyclerview.simplelist.SimpleListActivity"/>

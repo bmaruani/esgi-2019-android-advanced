@@ -35,8 +35,12 @@ class PhotoListFragment : Fragment() {
 
         viewModel = ViewModelProviders.of(this).get(PhotoListViewModel::class.java)
 
-        viewModel.photoListLiveData.observe(viewLifecycleOwner, Observer {
-            updateData(it)
+        viewModel.photoListLiveData.observe(viewLifecycleOwner, Observer { dataWrapper ->
+            when (dataWrapper) {
+                is Success -> updateData(dataWrapper.data)
+                //is Failure ->
+                //is Loading ->
+            }
         })
 
         viewModel.loadPhotoList()
