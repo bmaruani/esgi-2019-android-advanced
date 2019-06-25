@@ -48,6 +48,13 @@ class PhotoListFragment : Fragment() {
 
     private fun initRecyclerView() {
         simpleListAdapter = SimpleListAdapter()
+        simpleListAdapter?.setListener(object : SimpleListAdapter.ClickListener {
+            override fun onClick(photo: FlickrPhoto) {
+                
+            }
+
+        })
+
         photoRecyclerView.adapter = simpleListAdapter
         photoRecyclerView.layoutManager = LinearLayoutManager(context)
     }

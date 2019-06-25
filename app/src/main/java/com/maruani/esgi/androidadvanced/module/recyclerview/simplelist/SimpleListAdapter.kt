@@ -20,6 +20,10 @@ class SimpleListAdapter : RecyclerView.Adapter<SimpleListAdapter.SimpleListViewH
         notifyDataSetChanged()
     }
 
+    fun setListener(listener: ClickListener) {
+        this.listener = listener
+    }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SimpleListViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_simple_photo, parent, false)
         return SimpleListViewHolder(view)
