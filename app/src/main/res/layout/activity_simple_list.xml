@@ -4,12 +4,23 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".module.recyclerview.simplelist.SimpleListActivity"
+        tools:context=".module.simpleList.SimpleListActivity"
         android:orientation="vertical">
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/simplelist_title_text"
+            android:textColor="@color/colorPrimary"
+            android:textSize="30sp"
+            android:layout_marginTop="30dp"/>
+
     <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/simplelist_photos_recyclerview"
+            android:id="@+id/activity_simplelist_recyclerview"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:listitem="@layout/item_simple_photo"/>
+            tools:listitem="@layout/item_simple_photo"
+            />
 
 </LinearLayout>

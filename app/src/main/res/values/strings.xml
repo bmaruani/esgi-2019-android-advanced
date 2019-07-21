@@ -1,7 +1,33 @@
 <resources>
-    <string name="app_name">AndroidAdvanced</string>
-    <string name="home_recyclerview_button_text">RecyclerView</string>
-    <string name="home_title_text">Demo Application</string>
-    <string name="home_customview_button_text">custom view</string>
-    <string name="home_arch_component_button_text">arch component</string>
+    <string name="app_name">Summary Application</string>
+    <string name="home_title_text">Summary</string>
+    <string name="home_button_recyclerview_text">RecyclerView</string>
+    <string name="simplelist_title_text">Simple List</string>
+    <string name="home_button_customview_text">custom view</string>
+    <string name="home_button_arch_component_text">architecture component</string>
+    <string name="home_button_value_animator_text">valueanimator</string>
+    <string name="home_button_constraintset_text">constraintset</string>
+    <string name="home_button_motion_layout_text">motion layout</string>
+    <string name="home_button_lottie_text">lottie</string>
+    <string name="constraintset_title">Deux papillons</string>
+    <string name="constraintset_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+    <string name="label_proximity">Proximity Sensor: %1$.2f</string>
+    <string name="label_light">Light Sensor: %1$.2f</string>
+    <string name="error_no_sensor">No sensor</string>
+    <string name="home_button_sensor_text">sensor</string>
+
+    <!-- Heading for the app widget ID panel. -->
+    <string name="widget_id_label">Widget ID</string>
+
+    <!-- Heading for the updated panel. -->
+    <string name="widget_update_label">Last updated</string>
+
+    <!-- Button label for the update button. -->
+    <string name="widget_button_update">Update now</string>
+
+    <!-- Format string for the date & count text view -->
+    <string name="date_count_format">%1$d @%2$s</string>
+    <string name="home_button_canvas_text">canvas</string>
+    <string name="win_message">WIN!</string>
+    <string name="home_button_surface_text">surface</string>
 </resources>
